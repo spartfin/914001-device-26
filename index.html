@@ -3,10 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: Девайс</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="preload" href="/fonts/opensans.woff" as="font">
-  <link rel="preload" href="/fonts/opensans.woff2" as="font">
+  <meta name="format-detection" content="telephone=no">
+  <title>Девайс</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -14,7 +14,7 @@
   <header class="header">
     <h1 class="visually-hidden">Интернет магазин Девайс</h1>
     <nav class="header__navigation navigation">
-      <a class="navigation__logo">
+      <a class="navigation__logo" href="#">
         <img src="#" width="163" height="35" alt="Логотип «Девайс»">
       </a>
       <form class="navigation__search">
@@ -33,7 +33,7 @@
       </ul>
       <ul class="navigation__catalog">
         <li><a href="#">Виртуальная реальность</a></li>
-        <li><a href="#">Моноподы для селфи</a></li>
+        <li><a href="catalog.html">Моноподы для селфи</a></li>
         <li><a href="#">Экшн-камеры</a></li>
         <li><a href="#">Фитнес-браслеты</a></li>
         <li><a href="#">Умные часы</a></li>
@@ -41,6 +41,7 @@
       </ul>
     </nav>
   </header>
+
   <main>
     <section class="slider">
       <h2 class="visually-hidden">Наши товары</h2>
@@ -104,7 +105,7 @@
       <h2 class="visually-hidden">Перечень товаров</h2>
       <ul class="products__items">
         <li><a href="#">Виртуальная реальность</a></li>
-        <li><a href="#">Моноподы для селфи</a></li>
+        <li><a href="catalog.html">Моноподы для селфи</a></li>
         <li><a href="#">Экшен-камеры</a></li>
         <li><a href="#">Фитнесс-браслеты</a></li>
         <li><a href="#">Умные часы</a></li>
@@ -166,10 +167,11 @@
       </div>
     </section>
   </main>
+
   <footer>
     <section class="footer">
-      <a class="footer__logo">
-        <img src="#" width="163" height="35" alt="Логотип «Девайс»">
+      <a class="footer__logo" href="index.html">
+        <img src="" width="163" height="35" alt="Логотип «Девайс»">
       </a>
       <ul class="footer__item">
         <li><a href="#">Войти</a></li>
@@ -195,6 +197,7 @@
       </div>
     </section>
   </footer>
+
   <section class="popup">
     <h2>Напишите нам</h2>
     <form class="popup__form" action="https://echo.htmlacademy.ru" method="post">
@@ -217,8 +220,10 @@
   <section class="popup-map">
     <button class="popup-map" type="button">Закрыть</button>
   </section>
+
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="js/script.js"></script>
+
 </body>
 
 </html>
