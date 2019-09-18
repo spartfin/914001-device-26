@@ -5,7 +5,10 @@
   <meta charset="utf-8">
   <meta name="format-detection" content="telephone=no">
   <title>Девайс</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/opensans.woff2" as="font">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+  <link rel="preload" href="fonts/gilroylight.woff2" as="font">
+  <link rel="preload" href="fonts/gilroyextrabold.woff2" as="font">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -18,9 +21,11 @@
         <img src="img/logo-device.svg" width="163" height="35" alt="Логотип «Девайс»">
       </a>
       <form class="navigation__search">
-        <p><input type="search" name="q" placeholder="Поиск по сайту">
+        <p><input type="search" name="q" id="search" placeholder="Поиск по сайту">
+          <label for="search">Найти</label>
+        </p>
       </form>
-      <ul class="navigation__item">
+      <ul class="navigation__list">
         <li><a href="#">Войти</a></li>
         <li><a href="#">Сравнить</a></li>
         <li><a href="#">Корзина</a></li>
@@ -46,9 +51,9 @@
     <section class="slider">
       <h2 class="visually-hidden">Наши товары</h2>
       <div class="slider__controls">
-        <button class="slider__controls_selfie active">Первый слайд</button>
-        <button class="slider-controls_bracelet">Второй слайд</button>
-        <button class="slider-controls_quadrocopter">Третий слайд</button>
+        <button class="slider__controls_selfie active"><span class="visually-hidden">Первый слайд</span></button>
+        <button class="slider-controls_bracelet"><span class="visually-hidden">Второй слайд</span></button>
+        <button class="slider-controls_quadrocopter"><span class="visually-hidden">Третий слайд</span></button>
       </div>
       <div class="slider__list">
         <div class="slider__list_selfie">
@@ -58,12 +63,12 @@
             Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
           <a class="button" href="#">Подробнее</a>
           <table>
-            <tr>
+            <tr class="slider__list_item">
               <td>8,5 м</td>
               <td>5 кг</td>
               <td>Карбон</td>
             </tr>
-            <tr>
+            <tr class="slider__list_description">
               <td>Длина палки</td>
               <td>Вес палки</td>
               <td>Материал</td>
@@ -77,10 +82,10 @@
             не пропускать занятия и соблюдать диету.</p>
           <a class="button" href="#">Подробнее</a>
           <table>
-            <tr>
+            <tr class="slider__list_item">
               <td>48 часов</td>
             </tr>
-            <tr>
+            <tr class="slider__list_description">
               <td>Без подзарядки</td>
             </tr>
           </table>
@@ -92,11 +97,11 @@
             мощным лазером, замаскированным под стандартную камеру.</p>
           <a class="button" href="#">Подробнее</a>
           <table>
-            <tr>
+            <tr class="slider__list_item">
               <td>800 м</td>
               <td>50 м</td>
             </tr>
-            <tr>
+            <tr class="slider__list_description">
               <td>Дальность полета</td>
               <td>Радиус поражения</td>
             </tr>
@@ -116,8 +121,8 @@
       </ul>
     </section>
     <section class="services">
-      <div class="services__list">
-        <ul>
+      <div>
+        <ul class="services__list">
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Гарантии</a></li>
           <li><a href="#">Кредит</a></li>
@@ -154,10 +159,10 @@
         <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
           Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными
           компаниями</p>
-        <ul>
-          <li><a>Деловые линии</a></li>
-          <li><a>Автотрейдинг</a></li>
-          <li><a>ЖелДорЭкспедиция</a></li>
+        <ul class="info__companies">
+          <li>Деловые Линии</li>
+          <li>Автотрейдинг</li>
+          <li>ЖелДорЭкспедиция</li>
         </ul>
         <a href="#">Подробнее о нас</a>
       </div>
@@ -175,22 +180,22 @@
     <section class="footer">
       <h2 class="visually-hidden">Полезная информация</h2>
       <a class="footer__logo" href="index.html">
-        <img src="img/logo-device.svg" width="163" height="35" alt="Логотип «Девайс»">
+        <img src="img/logo-device-footer.svg" width="163" height="35" alt="Логотип «Девайс»">
       </a>
-      <ul class="footer__item">
+      <ul class="footer__nav_list">
         <li><a href="#">Войти</a></li>
         <li><a href="#">Сравнить</a></li>
         <li><a href="#">Корзина</a></li>
       </ul>
       <p>г. Москва, ул. Строителей, 15</p>
-      <ul class="footer__site-navigation">
+      <ul class="footer__site_nav">
         <li><a href="#">Доставка</a></li>
         <li><a href="#">Гарантия</a></li>
         <li><a href="#">Контакты</a></li>
       </ul>
       <p>Тел.:+7(495)495-95-95</p>
       <div class="footer__social">
-        <ul>
+        <ul class="footer__social_list">
           <li><a class="footer__social_button" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
           <li><a class="footer__social_button" href="#"><span class="visually-hidden">Инстаграмм</span></a></li>
           <li><a class="footer__social_button" href="#"><span class="visually-hidden">Твиттер</span></a></li>
@@ -203,7 +208,7 @@
   </footer>
 
   <section class="popup">
-    <h2>Напишите нам</h2>
+    <h2 class="visually-hidden">Напишите нам</h2>
     <form class="popup__form" action="https://echo.htmlacademy.ru" method="post">
       <p class="popup__item">
         <label for="popup__name">Ваше имя:</label>
@@ -217,12 +222,13 @@
         <label for="popup__text">Текст письма:</label>
         <textarea id="popup__text" name="textarea" placeholder="В свободной форме"></textarea>
       </p>
-      <button class="popup__button" type="submit">Отправить</button>
+      <button class="popup__submit" type="submit">Отправить</button>
     </form>
     <button class="popup__close" type="button">Закрыть</button>
   </section>
   <section class="popup-map">
     <h2 class="visually-hidden">Интерактивная карта офиса</h2>
+    <img src="img/map-big.png" width="960" height="559" alt="Карта расположения офиса">
     <button class="popup-map" type="button">Закрыть</button>
   </section>
 
