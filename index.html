@@ -20,29 +20,39 @@
       <a class="navigation__logo" href="#">
         <img src="img/logo-device.svg" width="163" height="35" alt="Логотип «Девайс»">
       </a>
-      <form class="navigation__search">
-        <p><input type="search" name="q" id="search" placeholder="Поиск по сайту">
-          <label for="search">Найти</label>
-        </p>
-      </form>
-      <ul class="navigation__list">
-        <li><a href="#">Войти</a></li>
-        <li><a href="#">Сравнить</a></li>
-        <li><a href="#">Корзина</a></li>
-      </ul>
-      <ul class="navigation__site-navigation">
-        <li><a href="#">Каталог товаров</a></li>
+      <div class="header__nav_wrapper">
+        <form class="navigation__search">
+          <div class="navigation__search_input">
+            <input type="search" name="q" id="search" placeholder="Поиск по сайту">
+            <div class="navigation__search_label"><label for="search">Найти</label></div>
+          </div>
+        </form>
+        <ul class="navigation__list">
+          <li><a href="#">Войти</a></li>
+          <li><a href="#">Сравнить</a></li>
+          <li><a href="#">Корзина</a></li>
+        </ul>
+      </div>
+      <ul class="navigation__site_nav">
+        <li><a href="#">Каталог товаров</a>
+          <div class="navigation__catalog">
+            <ul>
+              <li><a href="#">Виртуальная реальность</a></li>
+              <li><a href="catalog.html">Моноподы для селфи</a></li>
+              <li><a href="#">Экшн-камеры</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">Фитнес-браслеты</a></li>
+              <li><a href="#">Умные часы</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">Квадрокоптеры</a></li>
+            </ul>
+          </div>
+        </li>
         <li><a href="#">Доставка</a></li>
         <li><a href="#">Гарантия</a></li>
         <li><a href="#">Контакты</a></li>
-      </ul>
-      <ul class="navigation__catalog">
-        <li><a href="#">Виртуальная реальность</a></li>
-        <li><a href="catalog.html">Моноподы для селфи</a></li>
-        <li><a href="#">Экшн-камеры</a></li>
-        <li><a href="#">Фитнес-браслеты</a></li>
-        <li><a href="#">Умные часы</a></li>
-        <li><a href="#">Квадрокоптеры</a></li>
       </ul>
     </nav>
   </header>

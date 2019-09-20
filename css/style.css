@@ -6,6 +6,10 @@
   box-sizing: inherit;
 }
 
+html {
+  box-sizing: border-box;
+}
+
 @font-face {
   font-weight: 300;
   font-family: "Open Sans";
@@ -94,8 +98,29 @@ button {
 }
 
 /*Остальная стилизация*/
+.header {
+  width: 1160px;
+  min-height: 300px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
 .navigation {
+  position: relative;
   background-color: rgba(240, 197, 46, 0.5);
+  min-height: 300px;
+}
+
+.navigation__logo {
+  position: absolute;
+  top: -16px;
+  left: 60px;
+}
+
+.navigation__search {
+  display: flex;
+  padding-top: 50px;
+  padding-left: 60px;
 }
 
 .navigation__search input {
@@ -115,16 +140,6 @@ button {
   background-color: rgba(240, 197, 46, 0);
 }
 
-.navigation__search p {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 441px;
-  height: 47px;
-  border-bottom: 2px solid #000000;
-  margin: 0;
-}
-
 .navigation__search label {
   display: flex;
   align-items: center;
@@ -132,7 +147,8 @@ button {
   width: 83px;
   height: 47px;
   border: 2px solid #000000;
-  margin-left: 150px;
+  border-bottom: 0;
+  margin-left: 70px;
 }
 
 .navigation__search label:hover {
@@ -144,21 +160,101 @@ button {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.navigation__search_input {
+  display: flex;
+}
+
+.navigation__search_label {
+  position: relative;
+  visibility: hidden;
+}
+
+.navigation__search_label::after {
+  visibility: hidden;
+  position: absolute;
+  content: "";
+  width: 350px;
+  height: 2px;
+  background-color: #000000;
+  right: 0;
+}
+
+.navigation__search_input:hover .navigation__search_label,
+.navigation__search_input:hover .navigation__search_label::after {
+  visibility: visible;
+}
+
+.header__nav_wrapper {
+  display: flex;
+}
+
+.navigation__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-top: 58px;
+  margin-left: 150px;
+}
+
+.navigation__list li:nth-child(2) {
+  padding-left: 238px;
+}
+
+.navigation__list li:nth-child(3) {
+  padding-left: 65px;
+}
+
 .services p,
 .navigation__search input,
 .navigation__search label,
 .navigation__list a,
-.navigation__catalog {
+.navigation__site_nav .navigation__catalog a {
   font-family: "Open Sans";
   font-size: 15px;
   font-weight: 300;
   line-height: 30px;
   letter-spacing: 0.15px;
+  text-transform: none;
 }
 
-.navigation__site-navigation a {
+.navigation__site_nav {
+  display: flex;
+  margin: 0 60px;
+  padding: 0;
+  margin-top: 50px;
+}
+
+.navigation__site_nav li:nth-child(1) {
+  margin-right: 300px;
+}
+
+.navigation__site_nav li:nth-child(2) {
+  padding-right: 38px;
+}
+
+.navigation__site_nav li:nth-child(3) {
+  padding-right: 114px;
+}
+
+.navigation__catalog ul,
+.navigation__site_nav .navigation__catalog li {
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__site_nav a {
   text-transform: uppercase;
   letter-spacing: 3.6px;
+}
+
+.navigation__catalog {
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+}
+
+.navigation__site_nav li:nth-child(1):hover .navigation__catalog {
+  visibility: visible;
 }
 
 .slider__controls button {
