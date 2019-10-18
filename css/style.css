@@ -656,3 +656,9 @@ button {
 .cards__pagination_item-next:active {
   opacity: 0.3;
 }
+
+.cards__pagination_item-back:active,
+.cards__pagination_item-next:active {
+  opacity: 0.3;
+}
+
