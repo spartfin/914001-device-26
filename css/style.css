@@ -356,10 +356,6 @@ input[type="radio"].visually-hidden {
   background-color: transparent;
 }
 
-.form-search__field:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 1000px rgba(248, 226, 151, 1) inset;
-}
-
 .form-search__field:focus,
 .form-search__field:valid {
   border-bottom: 2px solid rgba(0, 0, 0, 1);
