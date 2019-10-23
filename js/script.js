@@ -16,6 +16,7 @@ function writeUs() {
   } catch (err) {
     isStorageSupport = false;
   }
+
   openPopupButton.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.add("modal__show");
@@ -34,11 +35,13 @@ function writeUs() {
       textField.focus();
     }
   });
+
   closePopupButton.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.remove("modal__show");
     popup.classList.remove("modal-error");
   });
+
   window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
       evt.preventDefault();
@@ -48,6 +51,7 @@ function writeUs() {
       }
     }
   });
+
   sendForm.addEventListener("click", function (evt) {
     if (!nameField.value || !emailField.value || !textField.value) {
       evt.preventDefault();
@@ -67,7 +71,7 @@ function writeUs() {
       }
     }
   });
-}
+};
 
 function map() {
   var openMap = document.querySelector(".contacts__map");
@@ -99,4 +103,4 @@ if (document.querySelector(".contacts__btn") !== null && document.querySelector(
 
 if (document.querySelector(".contacts__map") !== null && document.querySelector(".modal-map") !== null) {
   map();
-}
+};
